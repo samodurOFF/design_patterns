@@ -47,7 +47,7 @@
 				-moz-border-radius-topright: 5px;
 				border-top-right-radius: 5px;}
 			fieldset {
-				width: 310px;
+				width: 500px;
 				margin-top: 20px;
 				border: 1px solid #d6d6d6;
 				background-color: #ffffff;
@@ -56,7 +56,7 @@
 				font-style: italic;
 				color: #666666;}
 			input[type="text"] {
-				width: 120px;
+				width: 250px;
 				border: 1px solid #d6d6d6;
 				padding: 2px;
 				outline: none;}
@@ -78,7 +78,8 @@
 				cursor: pointer;}
 			.title {
 				float: left;
-				width: 160px;
+				margin-top: 10px;
+				width: 100px;
 				clear: left;}
 			.submit {
 				width: 310px;
@@ -86,11 +87,29 @@
 
 
 
+
+
+
+
+
     </style>
 </head>
 <body>
+
 <h1>{{title}}</h1>
 <p>Пользователь: {{user}}</p>
+<form action="" method="post">
+    <fieldset>
+        <legend>Сохранение переменных в csv файл</legend>
+        <label class="title" for="name">Имя файла:</label>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Сохранить"/>
+
+
+    </fieldset>
+</form>
+
 {{table}}
+
 </body>
 </html>
