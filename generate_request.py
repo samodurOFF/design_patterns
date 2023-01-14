@@ -1,5 +1,3 @@
-from tabulate import tabulate
-
 from variables import CGI_vars
 
 
@@ -17,4 +15,4 @@ def get_content(title, request, environ):
         for key, value in environ.items():
             response.append({'Переменная': str(key), 'Значение': str(value)})
 
-    request['table'] = tabulate(response, headers='keys', tablefmt='html') if response else None
+    request['table'] = response if response else None
