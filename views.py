@@ -1,9 +1,11 @@
+from tabulate import tabulate
 from templator import render
 from variables import ok_code, error_code
 
 
 class View_Vars:
     def __call__(self, request):
+        request['table'] = tabulate(request['table'], headers='keys', tablefmt='html')
         return ok_code, [render('index.html', **request).encode('utf-8')]
 
 
