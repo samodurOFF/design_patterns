@@ -1,0 +1,20 @@
+<div class="content">
+    <h1>{{title}}</h1>
+    <p>Пользователь: {{user}}</p>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Сохранение переменных в файл</legend>
+            <label for="endswith" class="title">Расширение:</label>
+            <select name="endswith" id="endswith">
+                <option value="csv">CSV</option>
+                <option value="txt">TXT</option>
+                <option value="json">JSON</option>
+            </select><br/>
+            <label class="title" for="name">Имя файла:</label>
+            <input type="text" name="name" id="name">
+            <input type="submit" value="Сохранить"/>
+        </fieldset>
+    </form>
+
+    {{table}}
+</div>
